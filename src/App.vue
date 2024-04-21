@@ -50,7 +50,7 @@ onMounted(() => {
 		
 		<section class="greeting">
 			<h2 class="title">
-				What's up, <input type="text" id="name" placeholder="Name here" v-model="name">
+				What's up, <input type="text" id="name" placeholder="HICHEM KALLEL" v-model="name">
 			</h2>
 		</section>
 
@@ -63,7 +63,7 @@ onMounted(() => {
 					type="text" 
 					name="content" 
 					id="content" 
-					placeholder="e.g. make a video"
+					placeholder="Go to the Gym"
 					v-model="input_content" />
 				
 				<h4>Pick a category</h4>

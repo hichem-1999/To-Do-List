@@ -33,6 +33,10 @@ const addTodo = () => {
 		editable: false,
 		createdAt: new Date().getTime()
 	})
+
+	// Clear input field
+	input_content.value = ''
+	input_category.value = null
 }
 
 const removeTodo = (todo) => {
@@ -63,7 +67,7 @@ onMounted(() => {
 					type="text" 
 					name="content" 
 					id="content" 
-					placeholder="Go to the Gym"
+					placeholder="e.g Go to the Gym"
 					v-model="input_content" />
 				
 				<h4>Pick a category</h4>

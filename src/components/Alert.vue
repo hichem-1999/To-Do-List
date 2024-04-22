@@ -1,8 +1,7 @@
-<!-- src/components/Alert.vue -->
 <template>
   <div class="alert" :class="alertType">
     <p>{{ message }}</p>
-    <button @click="closeAlert">&times;</button>
+    <button class="close-button" @click="closeAlert">&times;</button>
   </div>
 </template>
 
@@ -35,8 +34,11 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .alert {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -47,7 +49,14 @@ export default {
   margin: 0;
 }
 
-
+.alert button.close-button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: inherit;
+  padding: 0;
+}
 
 .alert-success {
   background-color: #d4edda;
@@ -55,19 +64,9 @@ export default {
   color: #155724;
 }
 
-
 .alert-danger {
   background-color: #f8d7da;
   border-color: #f5c6cb;
   color: #721c24;
-}
-
-.alert button {
-  float: right;
-  background-color: transparent;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: inherit;
 }
 </style>

@@ -27,6 +27,9 @@ export default {
     }
   },
   methods: {
+   alertType() {
+      return 'alert-' + this.type;
+    },
     closeAlert() {
       this.$emit('close');
     }
